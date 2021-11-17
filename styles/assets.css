@@ -1,0 +1,28 @@
+
+table, td, th {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+table, h2 {
+    margin-left : auto;
+    margin-right : auto;
+}
+
+#section-tableau h2 {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+  
+tbody tr:nth-child(even) {
+    background-color: #AEB6BF;
+}
+  
+table {
+    background-color: #6A6DEF;
+}

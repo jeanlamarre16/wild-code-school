@@ -1,0 +1,32 @@
+
+#contact h2 {
+    margin-left: 285px;
+}
+
+
+form {
+    margin : 0 auto;
+    width: 500px;
+}
+
+input, textarea {
+    width: 400px;
+}
+
+input:focus, textarea:focus {
+    border-color: #EBEDEF;
+}
+
+.div-contact {
+    margin : 10px 20px;
+}
+
+form label {
+    padding : 5px;
+    display: block;
+}
+
+.div-contact #submit {
+    margin-left: 350px;
+    width: 60px;
+}
