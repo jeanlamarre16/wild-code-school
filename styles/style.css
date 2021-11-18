@@ -1,0 +1,235 @@
+
+/* Ici je crée une feuille de style principale (main-style.css)  permettant de mutualiser les différentes feuilles 
+de styles du site permettant ainsi de faciliter la maintenance, la correction et/ou l'évolution de chacune des pages
+du site */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro:wght@300&display=swap');
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin : 70px auto 0 0;
+    line-height: 35px;
+}
+
+header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top : 0;
+    border-bottom : 1.5px solid blue;
+    box-shadow: -1px 8px 10px #6A6DEF;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-right: 10px;
+    border-left : 1px solid gray;
+    padding : 0 15px;
+}
+
+header nav ul li a {
+    font-size: 0.9em;
+    color: #181818;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #6A6DEF;
+    border-bottom: 1.5px solid blue;
+}
+
+#div-logo img {
+    width: 125px;
+    height: 65px;
+    margin-left: 25px;
+}
+
+#corps-de-page {
+    padding : 35px;
+    margin-bottom: 200px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background:#1C2833;
+    color : white;
+    padding: 20px;
+}
+
+#reseaux-sociaux {
+    display: flex;
+    background:#1c2833;
+    justify-content: center;
+    column-gap: 20px;
+  
+}
+
+#reseaux-sociaux p {
+    background-color: #fff;
+    padding : 2px 5px;
+    color : #fff;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+#reseaux-sociaux a {
+    color : #6A6DEF;
+}
+
+table, td, th {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+#section-tableau h2 {
+    text-align: center;
+    font-size: 18px;
+}
+
+table, #section-tableau h2 {
+    margin-left : auto;
+    margin-right : auto;
+}
+
+#corps-de-page > h2 {
+    text-align: left;
+    font-size: 18px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+  
+tbody tr:nth-child(even) {
+    background-color: #AEB6BF;
+}
+  
+table {
+    background-color: #6A6DEF;
+}
+
+#contact h2 {
+    margin-left: 125px;
+}
+
+form {
+    margin : 0 auto;
+    width: 45%;
+}
+
+.groupe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap : 15px;
+}
+
+input, textarea {
+    width: 350px;
+    padding : 8px;
+}
+
+.div-contact {
+    display: flex;
+    flex-direction: column;
+    row-gap : 1px;
+}
+
+form .div-contact textarea {
+    resize: none;
+    margin-top : -2px;
+}
+
+form .div-contact input, form .div-contact textarea {
+    background-color: rgb(235, 230, 230);
+}
+
+.div-contact #submit {
+    margin-left: 300px;
+    width: 70px;
+}
+
+.welcome-image {
+    width: 100%;
+    height: 300px;
+    margin-top : 50px;
+}
+
+.p-welcome {
+    text-align: justify;
+}
+
+#message-confirm {
+    width: 400px;
+    font-size: 1em;
+    margin : 0 auto;
+    padding : 2px;
+    text-align: center;
+    color : #fff;
+    background-color: green;
+}
+
+#message-confirm  a {
+    text-decoration: none;
+    color : #000;
+    font-size: 15px;
+}
+
+#family {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#family img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#family p {
+    text-align: center;
+}
+
+@media all and (max-width : 960px) {
+    .p-welcome {
+        font-size: 0.6em;
+    }
+
+    #corps-de-page {
+        margin-top : 50px;
+    }
+
+    header #div-logo {
+      display: none;
+      background-color: red;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom : 15px;
+    }
+
+    header nav ul li {
+        margin-right: none;
+        border-left : none;
+        padding : 0 15px;
+    }
+    #corps-de-page #family {
+        align-items: column;
+        flex-wrap: wrap;
+    }
+}
