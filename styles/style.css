@@ -1,8 +1,4 @@
 
-/* Ici je crée une feuille de style principale (main-style.css)  permettant de mutualiser les différentes feuilles 
-de styles du site permettant ainsi de faciliter la maintenance, la correction et/ou l'évolution de chacune des pages
-du site */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro:wght@300&display=swap');
 
 body {
@@ -74,10 +70,10 @@ footer {
   
 }
 
-#reseaux-sociaux p {
+#reseaux-sociaux p a {
     background-color: #fff;
     padding : 2px 5px;
-    color : #fff;
+    color : black;
     font-size: 25px;
     border-radius: 10px;
 }
@@ -94,11 +90,11 @@ table, td, th {
 }
 
 #section-tableau h2 {
-    text-align: center;
+    margin-left : 330px;
     font-size: 18px;
 }
 
-table, #section-tableau h2 {
+table {
     margin-left : auto;
     margin-right : auto;
 }
@@ -120,45 +116,50 @@ table {
     background-color: #6A6DEF;
 }
 
-#contact h2 {
-    margin-left: 125px;
-}
-
 form {
     margin : 0 auto;
     width: 45%;
 }
 
-.groupe {
+.champs-formulaire {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     row-gap : 15px;
+    align-items: center;
 }
 
-input, textarea {
-    width: 350px;
-    padding : 8px;
-}
-
-.div-contact {
+.champ-item {
     display: flex;
     flex-direction: column;
     row-gap : 1px;
 }
 
-form .div-contact textarea {
+.titre-formulaire {
+    font-size: 18px;
+    padding-left: 40px;
+}
+
+.champ-item textarea {
     resize: none;
     margin-top : -2px;
 }
 
-form .div-contact input, form .div-contact textarea {
+.champ-item input, .champ-item textarea {
     background-color: rgb(235, 230, 230);
+    width: 350px;
+    padding : 8px;
 }
 
-.div-contact #submit {
+#btn-submit {
     margin-left: 300px;
     width: 70px;
+    box-shadow: 3px 3px 3px #000;
+}
+
+#btn-submit:hover {
+    background-color: #6A6DEF;
+    color : #fff;
+    font-weight: bold;
 }
 
 .welcome-image {
@@ -181,7 +182,7 @@ form .div-contact input, form .div-contact textarea {
     background-color: green;
 }
 
-#message-confirm  a {
+#message-confirm a {
     text-decoration: none;
     color : #000;
     font-size: 15px;
@@ -203,6 +204,11 @@ form .div-contact input, form .div-contact textarea {
     text-align: center;
 }
 
+/*
+J'ai laissé ce commentaire sur toute la partie design responsive, 
+j'ai pas aller jusqu'au bout car je n'ai pas encore bien cerné ce sujet.
+En attendant je continue mes recherches pour mieux comprendre la mise en oeuvre
+
 @media all and (max-width : 960px) {
     .p-welcome {
         font-size: 0.6em;
@@ -212,7 +218,7 @@ form .div-contact input, form .div-contact textarea {
         margin-top : 50px;
     }
 
-    header #div-logo {
+    #div-logo {
       display: none;
       background-color: red;
     }
@@ -224,12 +230,13 @@ form .div-contact input, form .div-contact textarea {
     }
 
     header nav ul li {
-        margin-right: none;
+        margin-right: 0px;
         border-left : none;
         padding : 0 15px;
     }
-    #corps-de-page #family {
-        align-items: column;
+    #family {
         flex-wrap: wrap;
+        flex-direction: column;
     }
 }
+*/
